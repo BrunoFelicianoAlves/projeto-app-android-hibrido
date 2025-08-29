@@ -3,6 +3,7 @@
     --gelo:#f1f1f1;
     --verde:#19c463;
     --preto:#2a2a2a;
+    --cinza: gray;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
@@ -156,10 +157,6 @@ input[type="text"] {
     object-fit: cover;
 }
 
-.img-fluid {
-    max-width: 100%;
-}
-
 .block {
     margin-left: 2%;
     margin-right: 2%;
@@ -174,4 +171,79 @@ input[type="text"] {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.row {
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.item {
+    color: var(--preto);
+}
+
+.item-card {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    height: 240px;
+    flex: 45%;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.img-fluid {
+    max-width: 100%;
+}
+
+.img-container {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    /* width: 210px; */
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    background: var(--gelo);
+}
+
+.img-container img {
+    max-width: 150px;
+    /* width: 100%; */
+    /* height: 100%; */
+    object-fit: cover;;
+}
+
+.nome-rating {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.color-gray {
+    color: var(--cinza);
+}
+
+.mdi-star {
+    color: orange;
+}
+
+.bold {
+    font-weight: 800;
+}
+
+.price {
+    font-size: 20px;
+}
+
+@media (min-width:992px){
+    .item-card {
+        flex: 20%;
+    }
+}
+
+@media (min-width:1200px){
+    .item-card {
+        flex: 20%;
+    }
 }
