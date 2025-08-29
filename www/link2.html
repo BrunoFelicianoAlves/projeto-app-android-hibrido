@@ -1,0 +1,45 @@
+    <!-- App root element -->
+    <div id="app">
+
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="link2" class="page">
+        <div data-name="index" class="page color-theme-blue">
+
+                <!-- NAV TOPO -->
+                 <div class="top-nav">
+                    <h1 class="title-logo"><span>Green</span>Tech</span></h1>
+                    <a href="#" class="btn-cart" data-count="3">
+                        <i class="ri-shopping-bag-line"></i>
+                    </a>
+                </div>
+
+                <form>
+                    <input placeholder="O que você procura?" type="text">
+                    <i class="icone-busca ri-search-2-line"></i>
+                </form>
+
+                <!-- Scrollable page content -->
+                <div class="page-content">
+                    <div class="block">
+                        Conteúdo do link um
+                    </div>
+                </div>
+
+                <!-- Scrollable page content -->
+                <div class="page-content">
+                    <div class="block">
+                        Conteúdo do link 2
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+	<!-- jQuery -->
+	<script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>	
+    <!-- Roteamento do app-->
+    <script type="text/javascript" src="js/routes.js"></script>
+    <script src="cordova.js"></script>
