@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#2196f3">
+  <title>Green Tech</title>
+
+  <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/detalhes.css">
+  <link rel="stylesheet" href="css/carrinho.css">
+  <link rel="stylesheet" href="css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="css/remixicon/remixicon.css">
+</head>
+
+<body>
+  <div id="app">
+    <div class="view view-main">
+
+      <div data-name="carrinho" class="page color-theme-blue">
+
+        <div class="nav-top cart">
+            <a href="/index/"><i class="ri-arrow-left-s-line"></i></a>
+            <strong><i class="ri-shopping-cart-2-line"> Carrinho</i></strong>
+            <a href="#" class="link popover-open" data-popover=".popover-menu"><i class="ri-more-fill"></i></a>
+        </div>
+
+        <div class="popover popover-menu">
+          <div class="popover-angle"></div>
+          <div class="popover-inner">
+            <div class="list">
+              <ul>
+                <li>
+                  <a id="esvaziar" href="#" class="list-button popover-close">
+                      <i class="mdi mdi-broom"></i> Esvaziar carrinho
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB BAR -->
+        <div style="margin-bottom: 160px" class="toolbar toolbar-bottom">
+          <div id="totais" class="toolbar-inner display-flex align-items-center justify-content-center">
+            <div class="bd-bottom margin-top w-80 display-flex justify-content-space-between">
+              <span>Subtotal</span>
+              <span class="bold">R$ 800</span>
+            </div>
+            <div class="w-80 display-flex justify-content-space-between">
+              <span>Frete: </span>
+              <span class="bold">R$ 10</span>
+            </div>
+          </div>
+        </div>
+         
+        <!-- Toolbar Bar -->
+        <div class="toolbar toolbar-bottom">
+            <div class="toolbar-inner display-flex align-items-center justify-content-center">
+                <div class="flex-100">
+                    <button class="add-cart">Comprar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conteúdo -->
+        <div class="page-content">
+          <div class="listaCarrinho">
+            <!-- Item do carrinho -->
+            <div class="item-carrinho">
+              <div class="area-img">
+                <img src="img/default.png" alt="">
+              </div>
+              <div class="area-details">
+                
+                <div class="sup"><!-- parte superior-->
+                  <span class="name-prod"> Xbox Series X</span>
+                  <a class="delete-item" href="#">
+                    <i class="mdi mdi-close"></i>
+                  </a>
+                </div>
+                
+                <div class="middle">
+                  <span>1 TB</span>
+                </div> <!-- meio -->
+                
+                <div class="preco-quantidade">
+                  <span>R$ 99.500</span>
+                  <div class="count">
+                    <a href="#" class="minus">-</a>
+                    <input  readonly href="#" class="qtd-item" type="text" value="1"></input>
+                    <a href="#" class="plus">+</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="item-carrinho">
+              <div class="area-img">
+                <img src="img/default.png" alt="">
+              </div>
+              <div class="area-details">
+                
+                <div class="sup"><!-- parte superior-->
+                  <span class="name-prod"> Xbox Series X</span>
+                  <a class="delete-item" href="#">
+                    <i class="mdi mdi-close"></i>
+                  </a>
+                </div>
+                
+                <div class="middle">
+                  <span>1 TB</span>
+                </div> <!-- meio -->
+                
+                <div class="preco-quantidade">
+                  <span>R$ 99.500</span>
+                  <div class="count">
+                    <a href="#" class="minus">-</a>
+                    <input  readonly href="#" class="qtd-item" type="text" value="1"></input>
+                    <a href="#" class="plus">+</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="lib/framework7-bundle.min.js"></script>
+  <script src="lib/jquery-3.7.0.min.js"></script>
+  <script src="js/routes.js"></script>
+  <script src="cordova.js"></script>
+</body>
+</html>

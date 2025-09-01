@@ -78,7 +78,9 @@ var app = new Framework7({
     {
       path: '/carrinho/',
       url: 'carrinho.html',
-      animate: false,
+      options: {
+        transition: 'f7-push',
+      },
       on: {
         pageBeforeIn: function () {
           $("#menuPrincipal").hide("fast");
