@@ -110,12 +110,13 @@ form {
     position: relative;
 }
 
-input[type="text"] {
+#search {
     width: 90%;
     height: 45px;
     border-radius: 10px;
     margin: auto;
     padding: 10px 20px;
+    /* padding-left: 30px !important; */
     background: var(--gelo);
 }
 
@@ -128,7 +129,8 @@ input[type="text"] {
     top: 0px;
     right: 5%;
     font-size: 27px;
-    padding: 13px;
+    margin-top: 13px;
+    margin-right: 10px;
 }
 
 .page-content {
@@ -233,6 +235,10 @@ input[type="text"] {
 
 .price {
     font-size: 20px;
+}
+
+.gelo {
+    background: var(--gelo) !important;
 }
 
 @media (min-width:992px){

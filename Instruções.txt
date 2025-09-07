@@ -1,0 +1,27 @@
+Cria a mainView (usada no navegador e mobile) -> routes.js
+var mainView = app.views.create('.view-main', { url: '/index/' });
+
+Vídeo aula:
+https://www.youtube.com/watch?v=JG2lcJeQuO8
+
+https://criaraplicativos.com/cordova-android/cordova-installation-guide.html
+
+https://drive.google.com/drive/u/0/folders/1EoMGgprwxs2JRoZRYNlOLkggX_vrg0EB
+
+
+//OBS: Para executar no celular
+
+1 - Conecte o cabo usb no computador e no celular
+
+2 - É preciso que o depurador USB do celular esteja ativo
+
+3 - Comandos no terminal do computador(powershell, cmd, vscode,...). Digite -> adb devices -> cordova run android
+
+
+
+Outros links:
+
+
+
+https://fonts.google.com/selection/embed
+

@@ -19,7 +19,7 @@
 .buttons-top {
     display: flex;
     width: 100%;
-    background: white;
+    background: var(--gelo);
     position: absolute;
     top: 20px;
     justify-content: space-between;
@@ -99,7 +99,7 @@ table {
 }
 
 th, td {
-    padding: 1px;
+    padding: 10px 0px;
     text-align: center;
     border-bottom: 1px solid #ddd;
     border-right: 1px solid #ddd;
@@ -107,7 +107,8 @@ th, td {
 }
 
 th {
-    background-color: #ddd;
+    background-color: #ebebeb;
+    padding: 10px 0px;
 }
 
 .flex-40 {

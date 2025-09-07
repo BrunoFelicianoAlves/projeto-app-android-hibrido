@@ -18,6 +18,12 @@ var app = new Framework7({
           $("#menuPrincipal").show("fast");
         },
         pageInit: function () {
+
+          // app.views.main.router.navigate('/detalhes/');
+          app.views.main.router.navigate('/carrinho/');
+
+          $.getScript('js/detalhes.js');
+
           // Inicializa Swiper principal
           new Swiper(".mySwiper", {
             slidesPerView: 1,
@@ -60,6 +66,10 @@ var app = new Framework7({
           $("#menuPrincipal").hide("fast");
         },
         pageInit: function () {
+
+          app.views.main.router.navigate('/detalhes/');
+          $.getScript('js/detalhes.js');
+          
           // Evento botão adicionar ao carrinho
           $(".add-cart").click(function () {
             app.dialog.alert("Produto adicionado ao carrinho!");
@@ -84,6 +94,9 @@ var app = new Framework7({
       on: {
         pageBeforeIn: function () {
           $("#menuPrincipal").hide("fast");
+        },
+        pageInit: function(event, page) {
+          $.getScript('js/carrinho.js');
         }
       }
     },
@@ -106,7 +119,11 @@ var app = new Framework7({
 });
 
 // Cria a mainView (usada no navegador e mobile)
-var mainView = app.views.create('.view-main', { url: '/index/' });
+// var mainView = app.views.create('.view-main', { url: '/index/' });
+
+// https://www.youtube.com/watch?v=JG2lcJeQuO8
+
+//OBS - Comandos -> adb devices -> cordova run android
 
 // Atualiza botão ativo do menu inferior
 app.on('routeChange', function (route) {
