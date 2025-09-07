@@ -99,7 +99,7 @@ body{
 
 a {
     color: var(--verde);
-    font-weight: 600;
+    /* font-weight: 600; */
     text-decoration: none;
 }
 
@@ -240,6 +240,80 @@ form {
 .gelo {
     background: var(--gelo) !important;
 }
+
+/* Link4 */
+
+.navbar-bg {
+    background-color: #fff;
+}
+
+/* Container centralizado */
+div[data-name="link4"] .user-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centraliza verticalmente */
+  align-items: center;     /* centraliza horizontalmente */
+  min-height: calc(100vh - 56px); /* subtrai a altura do navbar */
+  padding: 20px;
+}
+
+/* Tabs */
+div[data-name="link4"] .tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+div[data-name="link4"] .tab-link {
+  padding: 10px 25px;
+  border-radius: 25px;
+  background-color: #e0e0e0;
+  color: #333;
+  text-decoration: none;
+  /* font-weight: bold; */
+}
+
+div[data-name="link4"] .tab-link.active {
+  background-color: #2196f3;
+  color: #fff;
+}
+
+/* Conteúdo das tabs */
+div[data-name="link4"] .tab-content {
+  display: none;
+  width: 100%;
+  max-width: 350px;
+}
+
+div[data-name="link4"] .tab-content.active {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Inputs e botões */
+div[data-name="link4"] input,
+div[data-name="link4"] button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+div[data-name="link4"] button {
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+div[data-name="link4"] button:hover {
+  background-color: #1976d2;
+}
+
+
+/* Link 4 */
 
 @media (min-width:992px){
     .item-card {

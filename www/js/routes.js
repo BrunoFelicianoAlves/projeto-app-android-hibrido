@@ -111,10 +111,71 @@ var app = new Framework7({
       animate: false
     },
     {
-      path: '/link4/',
-      url: 'link4.html',
-      animate: false
+    path: '/link4/',
+    url: 'link4.html',
+    animate: false,
+    on: {
+      pageInit: function (event, page) {
+        const $page = $(page.el);
+
+        // Alternar tabs login/cadastro
+        $page.find('.tab-link').on('click', function (e) {
+          e.preventDefault();
+          $page.find('.tab-link').removeClass('active');
+          $(this).addClass('active');
+          const tab = $(this).data('tab');
+          $page.find('.tab-content').removeClass('active');
+          $page.find('#' + tab).addClass('active');
+        });
+
+        // Login
+        $page.find('#btn-login').on('click', function () {
+          const email = $page.find('#login-email').val().trim();
+          const senha = $page.find('#login-senha').val().trim();
+          const usuarios = JSON.parse(localStorage.getItem('usuarios') || '[]');
+          const usuario = usuarios.find(u => u.email === email && u.senha === senha);
+
+          if (usuario) {
+            app.toast.create({ text: `Bem-vindo, ${usuario.nome}!`, position: 'center', closeTimeout: 2000 }).open();
+            app.views.main.router.navigate('/index/');
+          } else {
+            app.dialog.alert('E-mail ou senha inválidos!');
+          }
+        });
+
+        // Cadastro
+        $page.find('#btn-cadastrar').on('click', function () {
+          const nome = $page.find('#cad-nome').val().trim();
+          const email = $page.find('#cad-email').val().trim();
+          const senha = $page.find('#cad-senha').val().trim();
+
+          if (!nome || !email || !senha) {
+            app.dialog.alert('Preencha todos os campos!');
+            return;
+          }
+
+          let usuarios = JSON.parse(localStorage.getItem('usuarios') || '[]');
+          if (usuarios.find(u => u.email === email)) {
+            app.dialog.alert('E-mail já cadastrado!');
+            return;
+          }
+
+          usuarios.push({ nome, email, senha });
+          localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
+          app.toast.create({ text: 'Cadastro realizado com sucesso!', position: 'center', closeTimeout: 2000 }).open();
+
+          // Limpar campos
+          $page.find('#cad-nome').val('');
+          $page.find('#cad-email').val('');
+          $page.find('#cad-senha').val('');
+
+          // Alternar para login
+          $page.find('.tab-link[data-tab="login"]').click();
+        });
+      }
     }
+  }
   ]
 });
 

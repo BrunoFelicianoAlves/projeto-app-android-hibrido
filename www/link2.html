@@ -1,36 +1,37 @@
     <!-- App root element -->
     <div id="app">
+        <div>
+            <!-- Your main view, should have "view-main" class -->
+            <div class="view view-main">
+                <!-- Initial Page, "data-name" contains page name -->
+                <div data-name="link2" class="page">
+                    <div data-name="index" class="page color-theme-blue">
+                        <!-- NAV TOPO -->
+                        <div class="top-nav">
+                            <h1 class="title-logo"><span>Green</span>Tech</span></h1>
+                            <a href="#" class="btn-cart" data-count="3">
+                                <i class="ri-shopping-bag-line"></i>
+                            </a>
+                        </div>
 
-        <!-- Your main view, should have "view-main" class -->
-        <div class="view view-main">
-            <!-- Initial Page, "data-name" contains page name -->
-            <div data-name="link2" class="page">
-        <div data-name="index" class="page color-theme-blue">
+                        <form>
+                        <input id="search" class="search" type="text" name="search" placeholder="Pesquisar" >
+                        <i class="icone-busca ri-search-2-line"></i>
+                        </form>
 
-                <!-- NAV TOPO -->
-                 <div class="top-nav">
-                    <h1 class="title-logo"><span>Green</span>Tech</span></h1>
-                    <a href="#" class="btn-cart" data-count="3">
-                        <i class="ri-shopping-bag-line"></i>
-                    </a>
-                </div>
+                        <!-- Scrollable page content -->
+                        <div class="page-content">
+                            <div class="block">
+                                Conteúdo do link um
+                            </div>
+                        </div>
 
-                <form>
-                    <input placeholder="O que você procura?" type="text">
-                    <i class="icone-busca ri-search-2-line"></i>
-                </form>
-
-                <!-- Scrollable page content -->
-                <div class="page-content">
-                    <div class="block">
-                        Conteúdo do link um
-                    </div>
-                </div>
-
-                <!-- Scrollable page content -->
-                <div class="page-content">
-                    <div class="block">
-                        Conteúdo do link 2
+                        <!-- Scrollable page content -->
+                        <div class="page-content">
+                            <div class="block">
+                                Conteúdo do link 2
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
