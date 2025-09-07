@@ -1,9 +1,7 @@
 //Recuperar o id do localStorage
 var id = parseInt(localStorage.getItem('detalhe'));
-
 //Pegar os produtos do localStorage
 var produtos = JSON.parse(localStorage.getItem('produtos'));
-
 var item = produtos.find(produto => produto.id === id);
 
 if(item) {
@@ -34,7 +32,6 @@ if(item) {
     });
 
 } else {
-    //Não tem o item
     console.log('Produto não encontrado');
 }
 
@@ -47,7 +44,6 @@ function adicionarAoCarrinho(item, quantidade){
     if(itemNoCarrinho) {
         //Ja tem item no carrinho
         //Adicionar quantidade
-
         itemNoCarrinho.quantidade += quantidade;
         itemNoCarrinho.total_item = itemNoCarrinho.quantidade * item.preco_promocional;
     } else {
@@ -58,7 +54,6 @@ function adicionarAoCarrinho(item, quantidade){
         })
     }
 
-    //
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
 }
 
@@ -67,12 +62,6 @@ $(".add-cart").on('click', function() {
     //Adicionar ao carrinho
     adicionarAoCarrinho(item, 1);
     atualizarCarrinhoBadge();
-
-    var toastCenter = app.toast.create({
-        text: `${item.nome} adicionado ao carrinho`,
-        position: 'center',
-        closeTimeout: 2000,
-    });
 
     toastCenter.open();
 });

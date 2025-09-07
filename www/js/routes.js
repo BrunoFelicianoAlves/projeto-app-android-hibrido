@@ -20,9 +20,9 @@ var app = new Framework7({
         pageInit: function () {
 
           // app.views.main.router.navigate('/detalhes/');
-          app.views.main.router.navigate('/carrinho/');
+          // app.views.main.router.navigate('/carrinho/');
 
-          $.getScript('js/detalhes.js');
+          // $.getScript('js/detalhes.js');
 
           // Inicializa Swiper principal
           new Swiper(".mySwiper", {
@@ -119,10 +119,9 @@ var app = new Framework7({
 });
 
 // Cria a mainView (usada no navegador e mobile)
-// var mainView = app.views.create('.view-main', { url: '/index/' });
+var mainView = app.views.create('.view-main', { url: '/index/' });
 
 // https://www.youtube.com/watch?v=JG2lcJeQuO8
-
 //OBS - Comandos -> adb devices -> cordova run android
 
 // Atualiza botão ativo do menu inferior

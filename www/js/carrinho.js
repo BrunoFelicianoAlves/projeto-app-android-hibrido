@@ -57,14 +57,18 @@ function renderizarCarrinho() {
     $(".delete-item").on('click', function () {
     var index = $(this).data('index');
     console.log('O indice é: ', index);
+
     //Confirmar
     app.dialog.confirm('Confirma a remoção?','Remover', function() {
-        //Remover o item do carrinho
-        carrinho.splice(index, 1);
-        //Atualizar o carrinho com item removido
-        localStorage.setItem('carrinho', JSON.stringify(carrinho));
-        app.views.main.router.refreshPage();
-    });
+    //Remover o item do carrinho
+    carrinho.splice(index, 1);
+    //Atualizar o carrinho com item removido
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    renderizarCarrinho();
+    calcularTotal();
+    atualizarCarrinhoBadge();
+});
+
 });
 
     $(".minus").on('click', function () {
@@ -81,9 +85,9 @@ function renderizarCarrinho() {
             app.dialog.confirm(`Gostaria de remover o ${itemName} ?`, 'Remover', function(){
                 carrinho.splice(index, 1);
                 localStorage.setItem('carrinho', JSON.stringify(carrinho));
-                // app.views.main.router.refreshPage();
                 renderizarCarrinho();
                 calcularTotal();
+                atualizarCarrinhoBadge();
             });
         }
     });
@@ -95,7 +99,6 @@ function renderizarCarrinho() {
         carrinho[index].quantidade++;
         carrinho[index].total_item = carrinho[index].quantidade * carrinho[index].item.preco_promocional;
         localStorage.setItem('carrinho', JSON.stringify(carrinho));
-        // app.views.main.router.refreshPage();
         renderizarCarrinho();
         calcularTotal();
         
@@ -129,7 +132,8 @@ $("#esvaziar").on('click', function() {
     app.dialog.confirm('Tem certeza que quer esvaziar o carrinho?', 'ESVAZIAR', function(){
         //Apagar o localStorage do carrinho
         localStorage.removeItem('carrinho');
+        carrinho = [];
+        carrinhoVazio();
         atualizarCarrinhoBadge();
-        app.views.main.router.refreshPage();
     });
 })
