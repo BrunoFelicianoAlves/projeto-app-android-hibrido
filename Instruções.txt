@@ -15,7 +15,13 @@ https://drive.google.com/drive/u/0/folders/1EoMGgprwxs2JRoZRYNlOLkggX_vrg0EB
 
 2 - É preciso que o depurador USB do celular esteja ativo
 
-3 - Comandos no terminal do computador(powershell, cmd, vscode,...). Digite -> adb devices -> cordova run android
+3 - Comandos no terminal do computador(powershell, cmd, vscode,...).
+
+    1. Acesse \projeto-greentech-app\greentech>
+
+    2. Digite -> adb devices -> cordova run android
+
+ 
 
 
 

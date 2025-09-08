@@ -179,7 +179,8 @@ var app = new Framework7({
   ]
 });
 
-// Cria a mainView (usada no navegador e mobile)
+// Cria a mainView (usada no navegador e mobile) 
+// Descomente para testar no navegador do pc, comente para testar no celular
 var mainView = app.views.create('.view-main', { url: '/index/' });
 
 // https://www.youtube.com/watch?v=JG2lcJeQuO8
